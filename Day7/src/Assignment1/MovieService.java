@@ -16,6 +16,8 @@ public class MovieService {
     }
 
     public void watch(User user) throws InvalidAgeException, AgeBelow10, AgeBelow20Exception, UserRatingBelow3 {
+        // if there is case where perticular case will be passed only at one if block then use if-else if. 
+        // in below case it is fine to have separate if blocks as you are throwing exception right way and not going to execute next statement.
         if (user.getAge() < 0) {
             InvalidAgeException e3 = new InvalidAgeException("Invalid age");
             throw e3;
